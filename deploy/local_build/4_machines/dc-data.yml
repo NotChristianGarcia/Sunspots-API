@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+    data_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/data_worker/Dockerfile
+        image: notchristiangarcia/data_worker
+        env_file: "worker_vars.env"

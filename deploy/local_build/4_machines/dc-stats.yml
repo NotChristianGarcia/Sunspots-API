@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+    stats_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/stats_worker/Dockerfile
+        image: notchristiangarcia/stats_worker
+        env_file: "worker_vars.env"

@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+    redis:
+        image: redis:alpine
+        ports:
+         - "6379:6379"
+
+    api:
+        build:
+            context: ../../../
+            dockerfile: ./docker/api/Dockerfile
+        image: notchristiangarcia/api_image
+        ports:
+         - "5000:5000"
+        env_file: "env_vars.env"
+        
+    data_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/data_worker/Dockerfile
+        image: notchristiangarcia/data_worker
+        env_file: "env_vars.env"
+
+    graph_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/graph_worker/Dockerfile
+        image: notchristiangarcia/graph_worker
+        env_file: "env_vars.env"
+
+    stats_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/stats_worker/Dockerfile
+        image: notchristiangarcia/stats_worker
+        env_file: "env_vars.env"

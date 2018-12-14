@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+    data_worker:
+        image: notchristiangarcia/data_worker
+        env_file: "worker_vars.env"

@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+    graph_worker:
+        image: notchristiangarcia/graph_worker
+        env_file: "worker_vars.env"

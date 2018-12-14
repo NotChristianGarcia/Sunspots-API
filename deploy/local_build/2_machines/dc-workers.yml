@@ -1,0 +1,22 @@
+version: '3.4'
+services:
+    data_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/data_worker/Dockerfile
+        image: notchristiangarcia/data_worker
+        env_file: "worker_vars.env"
+
+    graph_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/graph_worker/Dockerfile
+        image: notchristiangarcia/graph_worker
+        env_file: "worker_vars.env"
+
+    stats_worker:
+        build:
+            context: ../../../
+            dockerfile: ./docker/stats_worker/Dockerfile
+        image: notchristiangarcia/stats_worker
+        env_file: "worker_vars.env"
