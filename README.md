@@ -1,6 +1,7 @@
-### Sunspots API! 
-##### Author: Christian R. Garcia
-##### EID: CRG2965
+### Sunspots API 
+#### Date: Fall 2018
+#### Author: Christian R. Garcia
+#### EID: CRG2965
 #### Description:
 This is an flask API that allows the user to get data, post data, create jobs, get jobs, and other variety of things using multiple workers which can be deployed on one VM or with many VMs. 
 #### Requirements:
