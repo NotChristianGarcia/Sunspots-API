@@ -1,4 +1,4 @@
-### Sunspots API
+## Sunspots API
 **Date:** Fall 2018  
 **EID:** CRG2965  
 **Description:**  
